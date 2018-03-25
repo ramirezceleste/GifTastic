@@ -19,17 +19,62 @@
 </head>
 
 <body>
-    <audio autoplay>
+    <!-- <audio autoplay>
         <source src="assets/music/themesong.mp3">
-    </audio>
+    </audio> -->
 
-    <div class="jumbotron">
-        <br>
-        <br>
+    <div class="jumbotron text-center">
+        
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class='panel panel-default'>
+                    <div class='panel-heading' id="button-panel">
+                        <h3 class='panel-title text-center'>
+                            <strong>Buttons</strong>
+                        </h3>
+                    </div>
+
+                    <div class='panel-body'>
+                        <div id="buttons">
+
+                        </div>
+
+                        <form id="gif-form">
+                            <label for="gif-input">Add another button</label>
+                            <input type="text" id="animal-input">
+                            <br>
+                            <input id="add-gif" type="submit" value="Submit">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class='panel panel-default'>
+                    <div class='panel-heading'id="button-panel">
+                        <h3 class='panel-title text-center'>
+                            <strong>Gifs will display here</strong>
+                        </h3>
+                    </div>
+
+                    <div class='panel-body'>
+                        <div id="gifsHere">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
     </div>
 
 
-    <script src="assets/javascript/app.js"></script>
+        <script src="assets/javascript/giftastic.js"></script>
 </body>
 
 </html>
