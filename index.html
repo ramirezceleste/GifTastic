@@ -24,7 +24,7 @@
     </audio> -->
 
     <div class="jumbotron text-center">
-        
+        <br>
     </div>
 
     <div class="container">
@@ -33,24 +33,12 @@
                 <div class='panel panel-default'>
                     <div class='panel-heading' id="button-panel">
                         <h3 class='panel-title text-center'>
-                            <strong>Buttons</strong>
+                            <strong>Movie buttons</strong>
                         </h3>
                     </div>
-
                     <div class='panel-body'>
-                        <div id="buttons">
-
-                        </div>
-
-                        <form id="gif-form">
-                            <label for="gif-input">Add another button</label>
-                            <input type="text" id="animal-input">
-                            <br>
-                            <input id="add-gif" type="submit" value="Submit">
-                        </form>
-
+                        <div id="buttonsHere"></div>
                     </div>
-
                 </div>
             </div>
 
@@ -58,21 +46,39 @@
                 <div class='panel panel-default'>
                     <div class='panel-heading'id="button-panel">
                         <h3 class='panel-title text-center'>
+                            <strong>Add another movie</strong>
+                        </h3>
+                    </div>
+                    <div class='panel-body text-center'>
+                        <div id="addButtons">
+                                <form id="gif-form">
+                                        <label for="gif-input">Add</label>
+                                        <input type="text" id="movie-input">
+                                        <br>
+                                        <br>
+                                        <input id="submitButton" type="submit" value="Submit">
+                                </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class='panel panel-default'>
+                    <div class='panel-heading'id="button-panel">
+                        <h3 class='panel-title text-center'>
                             <strong>Gifs will display here</strong>
                         </h3>
                     </div>
-
-                    <div class='panel-body'>
-                        <div id="gifsHere">
-
-                        </div>
+                    <div class='panel-body text-center'>
+                        <div id="gifsHere"></div>
                     </div>
-
                 </div>
             </div>
-
+        </div>
     </div>
-
 
         <script src="assets/javascript/giftastic.js"></script>
 </body>
