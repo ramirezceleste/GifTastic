@@ -41,11 +41,9 @@ for (var i = 0; i < results.length; i++){
     var gifsRating = $("<h3>").text("Rating: " + results[i].rating);
     gifsDiv.append(gifsRating);
     var gifsImage = $("<img>");
-    var stillImage = results[i].images.fixed_height_small_still.url;
-    var animated = results[i].images.fixed_height_small.url;
-    gifsImage.attr("src", stillImage);
-    gifsImage.attr("data-animate", animated);
-    gifsImage.attr("data-still", stillImage);
+    gifsImage.attr("src", results[i].images.original_still.url);
+    gifsImage.attr("data-animate", results[i].images.original.url);
+    gifsImage.attr("data-still", results[i].images.original_still.url);
     gifsImage.attr("data-state", "still");
     gifsDiv.append(gifsImage);
     $("#gifsHere").prepend(gifsDiv);
@@ -53,8 +51,20 @@ for (var i = 0; i < results.length; i++){
 
 }
 
+});
 
 });
 
+// Function to animate gifs then back to their still form 
+$("body").on("click", "img", function(){
+    var state = $(this).attr("data-state");
+    
+    if (state === "still"){
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
 
 });
