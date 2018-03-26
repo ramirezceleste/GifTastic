@@ -28,7 +28,7 @@ $("body").on("click", ".movieButtons", function (){
     var searchMovie = $(this).attr("data-name");
     console.log($(this).attr("data-name"));
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchMovie + "&api_key=yCfnCA9fO24mTNR8QEAInZrDXrbIBWTP&limit=10";
-
+$("#gifsHere").empty();
 $.ajax( {
     url: queryURL,
     method: "GET"
